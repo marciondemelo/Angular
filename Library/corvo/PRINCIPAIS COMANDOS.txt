@@ -1,0 +1,21 @@
+https://www.youtube.com/watch?v=lvjt9rBHWjo
+
+//create empty project 
+ng new magic-string --create-application=false
+
+//fill project with structure
+ng g library magic-string --prefix=nk
+
+
+(gerar um aplicativo dentro do projeto principal
+ng g application magic-string-example
+)
+
+
+//add in tag scrips in package.json file
+"lib:build": "ng build magic-string"
+"lib:package":"cd dist/magic-string && npm pack"
+
+//command generate new lib package
+npm run lib:build
+npm run lib:package //this command create a npm pack. for this lib generate a magic-string-0.0.1.tgz in dist\magic-string
